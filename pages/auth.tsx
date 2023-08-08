@@ -5,7 +5,6 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 
 import { FcGoogle } from "react-icons/fc";
-import { FaGithub } from "react-icons/fa";
 
 const Auth = () => {
   const router = useRouter();
@@ -107,23 +106,6 @@ const Auth = () => {
                 "
               >
                 <FcGoogle size={30} />
-              </div>
-              <div
-                onClick={() => signIn('github', { callbackUrl: '/' })}
-                className="
-                  w-10
-                  h-10
-                  bg-white
-                  rounded-full
-                  flex
-                  items-center
-                  justify-center
-                  cursor-pointer
-                  hover:opacity-80
-                  transition
-                "
-              >
-                <FaGithub size={30} />
               </div>
             </div>
             <p className="text-neutral-500 mt-12">
