@@ -24,7 +24,7 @@ const Auth = () => {
     } catch (error) {
       console.log(error)
     }
-  }, [])
+  }, [email, name, password])
 
   return (
     <div className="relative h-full w-full bg-[url('/images/hero.png')] bg-no-repeat bg-fixed bg-cover">
@@ -61,7 +61,7 @@ const Auth = () => {
                 value={password}
               />
             </div>
-            <button className="bg-orange-300 py-3 text-white rounded-md w-full mt-10 hover:bg-amber-700 transition">
+            <button onClick={register} className="bg-orange-300 py-3 text-white rounded-md w-full mt-10 hover:bg-amber-700 transition">
               {variant === 'login' ? 'Sign in' : 'Sign up'}
             </button>
             <p className="text-neutral-500 mt-12">
