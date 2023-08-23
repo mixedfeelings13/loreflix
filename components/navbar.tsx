@@ -1,5 +1,6 @@
 import NavbarItem from "./navbar-item"
 import MobileMenu from "./mobile-menu"
+import AccountMenu from "./account-menu"
 
 import { BsChevronDown, BsSearch, BsBell } from 'react-icons/bs'
 import { useCallback, useState } from "react"
@@ -7,8 +8,13 @@ import { useCallback, useState } from "react"
 const Navbar = () => {
 
   const [showMobileMenu, setShowMobileMenu] = useState(false)
+  const [showAccountMenu, setShowAccountMenu] = useState(false)
+
   const toggleMobileMenu = useCallback(() => {
     setShowMobileMenu((current) => !current)
+  }, []);
+  const toggleAccountMenu = useCallback(() => {
+    setShowAccountMenu((current) => !current)
   }, []);
 
   return (
@@ -48,7 +54,7 @@ const Navbar = () => {
           <p className="text-orange-900 text-sm">
             Browse
           </p>
-          <BsChevronDown className="text-orange-900 transition"/>
+          <BsChevronDown className={`text-orange-900 transition ${showMobileMenu ? 'rotate-180' : 'rotate-0'}`}/>
           <MobileMenu  visible={showMobileMenu} />
         </div>
         <div className="flex flex-row ml-auto gap-7 items-center">
@@ -58,12 +64,12 @@ const Navbar = () => {
           <div className="text-orange-900 hover:text-orange-500 cursor-pointer transition">
             <BsBell />
           </div>
-          <div className="flex flex-row items-center gap-2 cursor-pointer relative">
+          <div onClick={toggleAccountMenu} className="flex flex-row items-center gap-2 cursor-pointer relative">
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-md overflow-hidden">
               <img src="/images/default-blue.png" alt="Profile"/>
             </div>
-            <BsChevronDown className="text-orange-900 transition"/>
-            <AccountMenu />
+            <BsChevronDown className={`text-orange-900 transition ${showAccountMenu ? 'rotate-180' : 'rotate-0'}`}/>
+            <AccountMenu visible={showAccountMenu}/>
           </div>
         </div>
       </div>
