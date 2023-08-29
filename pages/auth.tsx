@@ -50,7 +50,7 @@ const Auth = () => {
           <img src="/images/logo.png" alt="Logo" className="h-32" />
         </nav>
         <div className="flex justify-center">
-          <div className="bg-orange-950 bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
+          <div className="bg-black bg-opacity-70 px-16 py-16 self-center mt-2 lg:w-2/5 lg:max-w-md rounded-md w-full">
             <h2 className="text-white text-4xl mb-8 font-semibold">
               {variant === 'login' ? 'Sign in' : 'Register'}
             </h2>
@@ -80,7 +80,7 @@ const Auth = () => {
             </div>
             <button 
               onClick={variant === 'login' ? login : register} 
-              className="bg-orange-300 py-3 text-white rounded-md w-full mt-10 hover:bg-amber-700 transition"
+              className="bg-pink-600 py-3 text-white rounded-md w-full mt-10 hover:bg-pink-700 transition"
             >
               {variant === 'login' ? 'Sign in' : 'Sign up'}
             </button>

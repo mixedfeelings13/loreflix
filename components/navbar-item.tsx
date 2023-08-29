@@ -1,3 +1,4 @@
+import React from "react"
 interface NavbarItemProps {
   label: string
 }
@@ -8,9 +9,9 @@ const NavbarItem: React.FC<NavbarItemProps> = ({
   return (
     <a
       className="
-        text-orange-900
+        text-white
         cursor-pointer
-        hover:text-orange-500
+        hover:text-gray-300
         transition
       "
     >

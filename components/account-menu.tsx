@@ -12,16 +12,16 @@ const AccountMenu: React.FC<AccountMenuProps> = ({
     return null;
   }
   return (
-    <div className="bg-orange-100 w-56 absolute top-14 right-0 py-5 flex-col border-2 border-orange-900 flex">
+    <div className="bg-black w-56 absolute top-14 right-0 py-5 flex-col border-2 border-gray-800 flex">
       <div className="flex flex-col gap-3">
         <div className="px-3 group/item flex flex-row gap-3 items-center w-full">
           <img src='/images/default-blue.png' className="w-8 rounded-md" alt="Profile"/>
-          <p className='text-orange-900 text-sm group-hover/item:underline'>
+          <p className='text-white text-sm group-hover/item:underline'>
             Username
           </p>
         </div>
-        <hr className="bg-orange-900 border-0 h-px my-4"/>
-        <div onClick={() => signOut} className="text-orange-900 px-3 text-center text-sm hover:underline">
+        <hr className="bg-gray-600 border-0 h-px my-4"/>
+        <div onClick={() => signOut} className="text-white px-3 text-center text-sm hover:underline">
           Sign Out of Loreflix
         </div>
       </div>
@@ -29,4 +29,4 @@ const AccountMenu: React.FC<AccountMenuProps> = ({
   )
 }
 
-export default AccountMenu
+export default AccountMenu;

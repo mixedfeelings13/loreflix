@@ -41,7 +41,7 @@ const Profiles = () => {
                     border-2
                     border-transparent
                     group-hover:cursor-pointer
-                    group-hover:border-pink-200
+                    group-hover:border-white
                   "
                 >
                   <img src="/images/default-blue.png" alt="Profile" />
@@ -52,7 +52,7 @@ const Profiles = () => {
                     text-gray-400
                     text-2xl
                     text-center
-                    group-hover:text-pink-200
+                    group-hover:text-white
                   "                
                 >
                   {user?.name}
