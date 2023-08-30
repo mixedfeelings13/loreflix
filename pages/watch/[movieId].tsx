@@ -26,7 +26,7 @@ const Watch = () => {
           bg-opacity-70
         "
       >
-        <AiOutlineArrowLeft className="text-white" size={40}/>
+        <AiOutlineArrowLeft onClick={() => router.push('/')} className="text-white cursor-pointer" size={40}/>
         <p className="text-white text-1xl md:text-3xl font-bold">
           <span className="font-light">
             Watching: 
